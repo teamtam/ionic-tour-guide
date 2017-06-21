@@ -8,7 +8,7 @@
 
 <ion-content padding>
   <div class="gallery-button" text-center>
-    <img [src]="imageSrc" />
+    <img [src]="imageSrc" *ngIf="imageSelected" />
     <ion-icon name="images" on-tap="openGallery()"></ion-icon>
     <p>Choose a Photo</p>
   </div>

@@ -10,6 +10,7 @@ import { Camera } from '@ionic-native/camera';
 export class GalleryPage {
 
   private imageSrc: string;
+  private imageSelected: boolean = false;
 
   constructor(public navCtrl: NavController, private camera: Camera) {
 
@@ -27,8 +28,18 @@ export class GalleryPage {
     }
 
     this.camera.getPicture(cameraOptions)
-      .then(file_uri => this.imageSrc = file_uri,
-      err => console.log(err));
+      .then(
+        (file_uri) => {
+          this.imageSrc = file_uri;
+          this.imageSelected = true;
+          console.log("hello");
+        }
+      )
+      .catch(
+        function() {
+          console.log("Promise Rejected");
+        }
+      );
   }
 
 }
