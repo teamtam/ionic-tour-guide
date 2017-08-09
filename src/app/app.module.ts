@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { GalleryPage } from '../pages/gallery/gallery';
-import { CameraPage } from '../pages/camera/camera';
 import { HomePage } from '../pages/home/home';
+import { MapPage } from '../pages/map/map';
+import { GalleryPage } from '../pages/gallery/gallery';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -14,9 +14,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    GalleryPage,
-    CameraPage,
     HomePage,
+    MapPage,
+    GalleryPage,
     TabsPage
   ],
   imports: [
@@ -26,9 +26,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    GalleryPage,
-    CameraPage,
     HomePage,
+    MapPage,
+    GalleryPage,
     TabsPage
   ],
   providers: [

@@ -3,11 +3,11 @@ import { NavController } from 'ionic-angular';
 import { Camera } from '@ionic-native/camera';
 
 @Component({
-  selector: 'page-camera',
-  templateUrl: 'camera.html',
+  selector: 'page-map',
+  templateUrl: 'map.html',
   providers: [Camera]
 })
-export class CameraPage {
+export class MapPage {
 
   public base64Image: string;
 
