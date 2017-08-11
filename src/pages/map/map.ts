@@ -1,28 +1,42 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Camera } from '@ionic-native/camera';
+import { Geolocation } from '@ionic-native/geolocation';
+
+declare var google;
 
 @Component({
   selector: 'page-map',
-  templateUrl: 'map.html',
-  providers: [Camera]
+  templateUrl: 'map.html'
 })
+
 export class MapPage {
 
-  public base64Image: string;
+  @ViewChild('map') mapElement: ElementRef;
+  map: any;
 
-  constructor(public navCtrl: NavController, private camera: Camera) {
+  constructor(public navCtrl: NavController, public geolocation: Geolocation) {
 
   }
 
-  takePicture() {
-    this.camera.getPicture({
-      destinationType: this.camera.DestinationType.DATA_URL,
-      targetWidth: 1000,
-      targetHeight: 1000
-    }).then((imageData) => {
-      // imageData is a base64 encoded string
-      this.base64Image = "data:image/jpeg;base64," + imageData;
+  ionViewDidLoad() {
+
+    this.loadMap();
+  }
+
+  loadMap() {
+
+    this.geolocation.getCurrentPosition().then((position) => {
+
+      let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+      let mapOptions = {
+        center: latLng,
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+
+      this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+
     }, (err) => {
       console.log(err);
     });

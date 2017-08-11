@@ -7,11 +7,5 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-content>
-      <button (click)="takePicture()">Take a Picture</button>
-      Latest Picture:
-      <img [src]="base64Image" *ngIf="base64Image" />
-    </ion-card-content>
-  </ion-card>
+  <div #map id="map"></div>
 </ion-content>
