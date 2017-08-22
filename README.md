@@ -8,7 +8,7 @@ Sample 'Tour Guide' app for Ionic
 * [Tabs](https://ionicframework.com/docs/api/components/tabs/Tabs/)
 * [List](https://ionicframework.com/docs/api/components/list/List/)
 * [Google Maps](https://developers.google.com/maps/documentation/javascript/) & [Geolocation](https://ionicframework.com/docs/native/geolocation/)
-* [PhotoLibrary](https://ionicframework.com/docs/native/photo-library/)
+* [Photo Library](https://ionicframework.com/docs/native/photo-library/)
 
 ## Other Notes
 * Currently using JavaScript SDK ... could use [Native SDK](https://ionicframework.com/docs/native/google-maps/) instead
