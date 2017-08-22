@@ -1,26 +1,15 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# ionic-tour-guide
+Sample 'Tour Guide' app for Ionic
 
-## How to use this template
+## Other Implementations
+* React Native: <https://github.com/teamtam/react-native-tour-guide>
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+## Components Used
+* [Tabs](https://ionicframework.com/docs/api/components/tabs/Tabs/)
+* [List](https://ionicframework.com/docs/api/components/list/List/)
+* [Google Maps](https://developers.google.com/maps/documentation/javascript/) & [Geolocation](https://ionicframework.com/docs/native/geolocation/)
+* [PhotoLibrary](https://ionicframework.com/docs/native/photo-library/)
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
-```
-
-Then, to run it, cd into `myTabs` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+## Other Notes
+* Currently using JavaScript SDK ... could use [Native SDK](https://ionicframework.com/docs/native/google-maps/) instead
+* Need to enter [Google Maps APK Key](https://developers.google.com/maps/documentation/javascript/get-api-key) in *index.html*
