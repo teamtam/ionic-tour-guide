@@ -16,11 +16,9 @@ export class MapPage {
   map: any;
 
   constructor(public navCtrl: NavController, public geolocation: Geolocation) {
-
   }
 
   ionViewDidLoad() {
-
     this.loadMap();
   }
 
@@ -47,6 +45,7 @@ export class MapPage {
           title: place.name
         })
       ));
+
     }, (err) => {
       console.log(err);
     });
